@@ -2,8 +2,9 @@ import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-emitting',
-  templateUrl: './emitting.component.html',
-  styleUrls: ['./emitting.component.css']
+  template: `<button (click)="test.emit({label: 'test'})">Test</button>
+  <button (click)="test.emit({label: 'bar'})">Bar</button>`,
+  styleUrls: []
 })
 export class EmittingComponent {
 
